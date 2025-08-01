@@ -1,14 +1,15 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
+import { PiSuitcaseSimpleBold } from "react-icons/pi";
 
 const Header = () => {
   return (
     <div className='head'>
     <header className="header">
-      <span className="logo">Job board</span>
+      <span className="logo"><PiSuitcaseSimpleBold />Job board</span>
        <nav className="nav">
-        <Link to="/jobs" className="nav-link">Jobs</Link>
-        <Link to="/jobs/post" className="nav-link">Post a Job</Link>
+        <NavLink to="/jobs" end className={({isActive})=> isActive ? "active-nav":"nav-link"}>Jobs</NavLink>
+        <NavLink to="/jobs/post" className={({isActive})=> isActive ? "active-nav":"nav-link"}>Post a Job</NavLink>
       </nav>
     </header></div>
   )

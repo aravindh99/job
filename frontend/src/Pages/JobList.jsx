@@ -41,7 +41,7 @@ const JobList = () => {
                     jobs.map((job) => (
                         <Link to={`/jobs/${job._id}`}>
                             <div key={job._id} className="job-card">
-                                <h3 className="job-title">{job.title}</h3>
+                                <h3 className="job-title">{job.title[0].toUpperCase()+job.title.slice(1)}</h3>
                                 <p className="job-info"><strong>Company:</strong> {job.company}</p>
                                 <p className="job-info"><strong>Location:</strong> {job.location}</p>
                             </div>

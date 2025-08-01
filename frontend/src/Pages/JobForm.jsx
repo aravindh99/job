@@ -146,7 +146,7 @@ const JobForm = () => {
             {message && <div className={`message ${message.includes('success') ? 'success' : 'error'}`}>{message}</div>}
 
             <form onSubmit={handleSubmit} className="job-form">
-                <div className="form-group">
+                <div className="form-group0">
                     <label className="form-label">Company:</label>
                     <input
                         type="text"
@@ -160,7 +160,7 @@ const JobForm = () => {
                     {errors.company && <span className="error-message">{errors.company}</span>}
                 </div>
 
-                <div className="form-group">
+                <div className="form-group1">
                     <label className="form-label">Job Title:</label>
                     <input
                         type="text"
@@ -174,7 +174,7 @@ const JobForm = () => {
                     {errors.title && <span className="error-message">{errors.title}</span>}
                 </div>
 
-                <div className="form-group">
+                <div className="form-group2">
                     <label className="form-label">Description:</label>
                     <textarea
                         name="description"
@@ -189,7 +189,7 @@ const JobForm = () => {
                     {errors.description && <span className="error-message">{errors.description}</span>}
                 </div>
 
-                <div className="form-group">
+                <div className="form-group3">
                     <label className="form-label">Pay Status:</label>
                     <select
                         name="payStatus"
@@ -206,7 +206,7 @@ const JobForm = () => {
                     {errors.payStatus && <span className="error-message">{errors.payStatus}</span>}
                 </div>
 
-                <div className="form-group">
+                <div className="form-group4">
                     <label className="form-label">Job Type:</label>
                     <select
                         name="jobType"
@@ -225,7 +225,7 @@ const JobForm = () => {
                     {errors.jobType && <span className="error-message">{errors.jobType}</span>}
                 </div>
 
-                <div className="form-group">
+                <div className="form-group5">
                     <label className="form-label">Skills (comma separated, max 10):</label>
                     <input
                         type="text"
@@ -238,7 +238,7 @@ const JobForm = () => {
                     {errors.skills && <span className="error-message">{errors.skills}</span>}
                 </div>
 
-                <div className="form-group">
+                <div className="form-group6">
                     <label className="form-label">Location:</label>
                     <input
                         type="text"
