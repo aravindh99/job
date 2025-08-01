@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { fetchJobById } from '../services/api'
+import Header from '../components/Header'
 
 const JobDetails = () => {
     const { id } = useParams()
@@ -32,8 +33,10 @@ const JobDetails = () => {
     if (!job) return <div className="error">Job not found</div>
 
     return (
-        <div className="job-details-container">
-            <h1 className="page-title">Job Details</h1>
+        <>
+            <Header />
+            <div className="job-details-container">
+                <h1 className="page-title">Job Details</h1>
 
             <div className="job-details-card">
                 <h2 className="job-title">{job.title}</h2>
@@ -81,6 +84,7 @@ const JobDetails = () => {
                 </button>
             </div>
         </div>
+        </>
     )
 }
 

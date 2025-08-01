@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { createJob } from '../services/api'
+import Header from '../components/Header'
 
 const JobForm = () => {
     const [formData, setFormData] = useState({
@@ -137,8 +138,10 @@ const JobForm = () => {
     }
 
     return (
-        <div className="job-form-container">
-            <h1 className="page-title">Post a Job</h1>
+        <>
+            <Header />
+            <div className="job-form-container">
+                <h1 className="page-title">Post a Job</h1>
 
             {message && <div className={`message ${message.includes('success') ? 'success' : 'error'}`}>{message}</div>}
 
@@ -258,6 +261,7 @@ const JobForm = () => {
                 </button>
             </form>
         </div>
+        </>
     )
 }
 

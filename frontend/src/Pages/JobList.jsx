@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { fetchAllJobs } from '../services/api'
+import Header from '../components/Header'
 
 const JobList = () => {
     const [jobs, setJobs] = useState([])
@@ -26,12 +27,9 @@ const JobList = () => {
 
     return (
         <>
-            <header className="header">
-                <span className="logo">Job-board</span>
-                <Link to="/jobs/post" >Post a job</Link>
-                <Link to="/jobs">Jobs</Link>
-            </header>
-            <h1 className="page-title">Jobs available</h1>
+            <Header />
+            <div className='list'>
+            <h2 className="page-title">Jobs Listed</h2>
 
             {loading && <div className="loading">Loading jobs...</div>}
             {error && <div className="error">Error: {error}</div>}
@@ -41,22 +39,16 @@ const JobList = () => {
                     <p className="no-jobs">No jobs available</p>
                 ) : (
                     jobs.map((job) => (
-                        <Link to="/jobs/:job._id">
-                        <div key={job._id} className="job-card">
-                            <h3 className="job-title">{job.title}</h3>
-                            <p className="job-info"><strong>Company:</strong> {job.company}</p>
-                            <p className="job-info"><strong>Location:</strong> {job.location}</p>
-                            <p className="job-info"><strong>Type:</strong> {job.jobType}</p>
-                            <p className="job-info"><strong>Pay Status:</strong> {job.payStatus}</p>
-                            <p className="job-info"><strong>Description:</strong> {job.description}</p>
-                            {job.skills && job.skills.length > 0 && (
-                                <p className="job-info"><strong>Skills:</strong> {job.skills.join(', ')}</p>
-                            )}
-                            <p className="job-date"><strong>Posted:</strong> {new Date(job.createdAt).toLocaleDateString()}</p>
-                        </div>
+                        <Link to={`/jobs/${job._id}`}>
+                            <div key={job._id} className="job-card">
+                                <h3 className="job-title">{job.title}</h3>
+                                <p className="job-info"><strong>Company:</strong> {job.company}</p>
+                                <p className="job-info"><strong>Location:</strong> {job.location}</p>
+                            </div>
                         </Link>
                     ))
                 )}
+            </div>
             </div>
         </>
     )
