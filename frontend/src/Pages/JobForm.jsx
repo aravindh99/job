@@ -256,7 +256,7 @@ const JobForm = () => {
                 <button
                     type="submit"
                     disabled={loading}
-                    className={`form-button ${loading ? 'loading' : ''}`}
+                    className={`apply-button ${loading ? 'loading' : ''}`}
                 >
                     {loading ? 'Posting...' : 'Post Job'}
                 </button>
