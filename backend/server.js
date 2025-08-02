@@ -31,11 +31,7 @@ const job = mongoose.model('Job', JobSchema)
 
 // Health check endpoint for cron jobs
 app.get('/health', (req, res) => {
-    res.status(200).json({
-        status: 'OK',
-        message: 'Server is running',
-        timestamp: new Date().toISOString()
-    })
+    res.status(200).send('ok')
 })
 
 app.get('/jobs', async (req, res) => {

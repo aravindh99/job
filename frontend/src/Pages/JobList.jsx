@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { fetchAllJobs } from '../services/api'
 import Header from '../components/Header'
 
+
 const JobList = () => {
     const [jobs, setJobs] = useState([])
     const [loading, setLoading] = useState(true)
@@ -27,7 +28,7 @@ const JobList = () => {
 
     return (
         <>
-            <Header />
+           <Header/>
             <div className='list'>
             <h2 className="page-title">Jobs Listed</h2>
 

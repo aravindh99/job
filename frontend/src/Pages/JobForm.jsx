@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { createJob } from '../services/api'
 import Header from '../components/Header'
 
+
 const JobForm = () => {
     const [formData, setFormData] = useState({
         company: '',
@@ -139,7 +140,7 @@ const JobForm = () => {
 
     return (
         <>
-            <Header />
+            <Header/>
             <div className="job-form-container">
                 <h1 className="page-title">Post a Job</h1>
 

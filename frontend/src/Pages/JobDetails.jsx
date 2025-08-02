@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import { fetchJobById } from '../services/api'
 import Header from '../components/Header'
 
+
 const JobDetails = () => {
     const { id } = useParams()
     const [job, setJob] = useState(null)
@@ -34,7 +35,7 @@ const JobDetails = () => {
 
     return (
         <>
-            <Header />
+          <Header/>  
             <div className="job-details-container">
                 <h1 className="page-title">Job Details</h1>
 
