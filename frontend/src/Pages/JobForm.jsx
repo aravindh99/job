@@ -142,7 +142,7 @@ const JobForm = () => {
         <>
             <Header/>
             <div className="job-form-container">
-                <h1 className="page-title">Post a Job</h1>
+                <h2>Post a Job</h2><br/>
 
             {message && <div className={`message ${message.includes('success') ? 'success' : 'error'}`}>{message}</div>}
 
