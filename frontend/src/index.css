@@ -3,27 +3,28 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: inherit;
+  color: white;
 }
 
 *:not(input):not(textarea):not(select) {
   background-color: transparent;
 }
 
-/* Dark Theme Base */
 html,
 body {
-  background-color: #1a1a2e !important;
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%) !important;
-  color: #e0e0e0 !important;
+  background-color: #1a1a2e;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
 }
 
-
-/* Common Elements */
 .page-title {
   margin: 20px 30px;
   color: #ffffff;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+  color: white;
+  font-size: 1.5rem;
 }
 
 .loading {
@@ -59,11 +60,6 @@ body {
   border-radius: 12px;
 }
 
-.logo img {
-  filter: brightness(0) invert(1);
-  width: 200px;
-  height: 64px;
-}
 .nav {
   display: flex;
   gap: 20px;
@@ -81,6 +77,7 @@ body {
   transform: scale(1.1);
   color: #64b5f6;
   text-shadow: 0 0 10px rgba(100, 181, 246, 0.5);
+  text-decoration: underline;
 }
 
 .nav-link:hover {
@@ -332,7 +329,6 @@ body {
   margin-top: 4px;
 }
 
-
 /* Job Details */
 .job-details-container {
   max-width: 800px;
@@ -379,6 +375,8 @@ body {
   border-radius: 12px;
 }
 
+
+
 .apply-button {
   background: #8a6c6c;
   border-radius: 30px;
@@ -399,12 +397,13 @@ body {
 
 
 /* Mobile Large (576px to 767px) */
-@media (min-width: 576px) and (max-width: 767px) {
+@media (max-width: 767px) {
   .header {
     width: 100%;
     padding: 12px 15px;
     flex-direction: column;
     gap: 10px;
+    row-gap: 20px;
   }
 
   .logo {
@@ -412,12 +411,13 @@ body {
   }
 
   .nav {
-    gap: 20px;
+    gap: 29px;
+    margin-bottom: 10px;
+    font-size: 1rem;
   }
 
-  .nav-link,
   .active-nav {
-    font-size: 1rem;
+    text-decoration: underline;
   }
 
   .jobs-container {
@@ -469,13 +469,6 @@ body {
     font-size: 18px;
   }
 
-  .job-details-container {
-    padding: 12px;
-  }
-
-  .job-details-card {
-    padding: 15px;
-  }
 }
 
 
@@ -488,6 +481,3 @@ a {
 a:visited {
   color: #99b1bb !important;
 }
-
-
-

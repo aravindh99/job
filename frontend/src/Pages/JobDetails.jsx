@@ -37,10 +37,9 @@ const JobDetails = () => {
         <>
           <Header/>  
             <div className="job-details-container">
-                <h1 className="page-title">Job Details</h1>
 
             <div className="job-details-card">
-                <h2 className="job-title">{job.title}</h2>
+                <h2 className="job-title">{job.title[0].toUpperCase()+job.title.slice(1)}</h2>
 
                 <div className="job-detail">
                     <strong>Company:</strong> {job.company}
